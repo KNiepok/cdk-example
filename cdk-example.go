@@ -46,7 +46,7 @@ func main() {
 // be deployed. For more information see: https://docs.aws.amazon.com/cdk/latest/guide/environments.html
 func env() *awscdk.Environment {
 	return &awscdk.Environment{
-		Account: jsii.String("130709053555"),
-		Region:  jsii.String("ew-west-1"),
+		Account: jsii.String("319313959906"),
+		Region:  jsii.String("eu-west-1"),
 	}
 }
