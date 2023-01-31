@@ -30,9 +30,12 @@ func NewCdkExampleStack(scope constructs.Construct, id string, props *CdkExample
 func main() {
 	defer jsii.Close()
 
-	app := awscdk.NewApp(nil)
-
-	NewCdkExampleStack(app, "CdkExampleStack", &CdkExampleStackProps{
+	app := awscdk.NewApp(&awscdk.AppProps{
+		DefaultStackSynthesizer: awscdk.NewDefaultStackSynthesizer(&awscdk.DefaultStackSynthesizerProps{
+			Qualifier: jsii.String("hnb659fds"),
+		}),
+	})
+	NewCdkExampleStack(app, "CdkExampleStack-spacelift", &CdkExampleStackProps{
 		awscdk.StackProps{
 			Env: env(),
 		},
